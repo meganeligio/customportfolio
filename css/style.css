@@ -30,39 +30,71 @@
     padding: 1em;
     font-size: 87.5%;
     line-height: 1.5em;
-    background-color: rgba(255 255 255 / .847);
+    background-color: rgb(255 255 255);
  }
 
  h1 {
-    font-size: 3em;
+  font-family: LEMON MILK, Avenir Next, Helvetica, sans-serif;
+  font-size: 3em;
  }
 
-/* CUSTOMIZED TYPE */
-
-h3 {
+ h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-transform: uppercase;
   font-size: 86%;
  }
 
- .uppercase {
+strong {
+  font-family: LEMON MILK, Avenir Next, Helvetica, sans-serif;
+}
+
+/* CUSTOMIZED TYPE */
+
+.contact {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.uppercase {
   text-transform: uppercase;
  }
 
- .pink {
-  color: rgb(242 172 184);
+.blue {
+  color: rgb(113 192 177);
+}
+
+.pink {
+  color: rgb(242 172 184 / 1);
  }
 
- .orange {
-  color: rgb(222 166 86);
+.orange {
+  color: rgb(222 166 86 / 1);
  }
 
- .red {
-  color: rgb(232 133 124);
+.red {
+  color: rgb(232 133 124 / 1);
  }
 
- .purple {
-  color: rgb(215 162 228);
+.purple {
+  color: rgb(215 162 228 / 1);
  }
+
+ /* BUTTONS */
+
+ .button {
+  display: inline-block;
+  color:rgb(255 255 255 / 1);
+  background: rgb(113 192 177);
+  border: 2px solid rgb(113 192 177);
+  border-radius: 1em;
+  padding: 1em 2em;
+  margin: .5em;
+}
+.button:hover {
+  background: rgb(84 150 138);
+  color: rgba(255 255 255 / 1);
+  border-color: rgb(84 150 138);
+}
 
  /* CUSTOM FONT STYLING */
 /* FONT CREDIT: https://marsnev.com/ */
@@ -153,7 +185,7 @@ h3 {
  .site-navigation a:hover,
  .site-navigation a.selected {
    color: rgb(0 0 0 / .6);
-   border-bottom: 0.05em solid rgb(0 0 0 / .2);
+   border-bottom: 0.05em solid rgb(113 192 177);
  }
 
  section {
@@ -201,8 +233,8 @@ h3 {
  }
 
  .thumbgrid a:hover img {
-  filter: brightness(1);
-  border: 1px solid rgb(0 0 0 / .3);
+  filter: contrast(1.20);
+  border: 1px solid rgb(113 192 177);
  }
 
  /* LAYOUT: FLEX GRID */
