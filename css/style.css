@@ -64,6 +64,21 @@ h3 {
   color: rgb(215 162 228);
  }
 
+ /* CUSTOM FONT STYLING */
+/* FONT CREDIT: https://marsnev.com/ */
+
+@font-face {
+  font-family: 'LEMON MILK';
+  src: url('../fonts/LEMONMILK-Bold.eot');
+  src: url('../fonts/LEMONMILK-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/LEMONMILK-Bold.woff2') format('woff2'),
+      url('../fonts/LEMONMILK-Bold.woff') format('woff'),
+      url('../fonts/LEMONMILK-Bold.ttf') format('truetype'),
+      url('../fonts/LEMONMILK-Bold.svg#LEMONMILK-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
  /*  LINKS */
 
  a {
