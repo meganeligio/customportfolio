@@ -239,11 +239,11 @@ strong {
 
  /* PERSONAL SECTION */
 
-/* .personal {
-  background: rgb(205, 195, 197);
-  padding: 2em;
+.personal {
+  background: rgba(0 0 0 / .1);
+  padding: 3em;
   margin: 0 auto;
-} */
+}
 
  .custom-headline {
   font-family: LEMON MILK, Avenir Next, Helvetica, sans-serif;
