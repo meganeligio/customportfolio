@@ -54,6 +54,10 @@ strong {
 
 /* CUSTOMIZED TYPE */
 
+.uppercase {
+  line-height: 1;
+}
+
 .contact {
   text-transform: uppercase;
   font-weight: 600;
@@ -259,7 +263,6 @@ strong {
   font-family: 'LEMON MILK MED', 'Avenir Next', Helvetica, sans-serif;
   font-size: 2em;
   padding-bottom: 1em;
-  line-height: 1;
   color: rgb(113 192 177);
  }
 
