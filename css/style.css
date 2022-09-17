@@ -23,7 +23,7 @@
  /* TYPOGRAPHY */
 
  body {
-    font-family: Avenir Next, Helvetica, Arial, sans-serif;
+    font-family: 'Avenir Next', Helvetica, Arial, sans-serif;
     color: rgb(0 0 0 / .7);
     max-width: 1200px;
     margin: 0 auto;
@@ -34,12 +34,12 @@
  }
 
  h1 {
-  font-family: LEMON MILK, Avenir Next, Helvetica, sans-serif;
+  font-family: 'LEMON MILK BOLD', 'Avenir Next', Helvetica, sans-serif;
   font-size: 3em;
  }
 
  h2 {
-  font-family: LEMON MILK, Avenir Next, Helvetica, sans-serif;
+  font-family: 'LEMON MILK BOLD', 'Avenir Next', Helvetica, sans-serif;
  }
 
  h3 {
@@ -49,7 +49,7 @@
  }
 
 strong {
-  font-family: LEMON MILK, Avenir Next, Helvetica, sans-serif;
+  font-family: 'LEMON MILK BOLD', 'Avenir Next', Helvetica, sans-serif;
 }
 
 /* CUSTOMIZED TYPE */
@@ -59,11 +59,8 @@ strong {
   font-weight: 600;
 }
 
-.uppercase {
-  text-transform: uppercase;
- }
-
 .blue {
+  font-family: 'LEMON MILK MED', 'Avenir Next', Helvetica, sans-serif;
   color: rgb(113 192 177);
 }
 
@@ -98,20 +95,31 @@ strong {
   background: rgb(84 150 138);
   color: rgba(255 255 255 / 1);
   border-color: rgb(84 150 138);
+  border-radius: 3em;
 }
 
  /* CUSTOM FONT STYLING */
 /* FONT CREDIT: https://marsnev.com/ */
 
 @font-face {
-  font-family: 'LEMON MILK';
-  src: url('../fonts/LEMONMILK-Bold.eot');
-  src: url('../fonts/LEMONMILK-Bold.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/LEMONMILK-Bold.woff2') format('woff2'),
-      url('../fonts/LEMONMILK-Bold.woff') format('woff'),
-      url('../fonts/LEMONMILK-Bold.ttf') format('truetype'),
-      url('../fonts/LEMONMILK-Bold.svg#LEMONMILK-Bold') format('svg');
-  font-weight: bold;
+  font-family: 'LEMON MILK BOLD';
+  src: url('../fonts/lemonmilk-bold/LEMONMILK-Bold.eot');
+  src: url('../fonts/lemonmilk-bold/LEMONMILK-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/lemonmilk-bold/LEMONMILK-Bold.woff2') format('woff2'),
+      url('../fonts/lemonmilk-bold/LEMONMILK-Bold.woff') format('woff'),
+      url('../fonts/lemonmilk-bold/LEMONMILK-Bold.ttf') format('truetype'),
+      url('../fonts/lemonmilk-bold/LEMONMILK-Bold.svg#LEMONMILK-Bold') format('svg');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LEMON MILK MED';
+  src: url('../fonts/lemonmilk-medium/LEMONMILK-Medium.eot');
+  src: url('../fonts/lemonmilk-medium/LEMONMILK-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/lemonmilk-medium/LEMONMILK-Medium.woff2') format('woff2'),
+      url('../fonts/lemonmilk-medium/LEMONMILK-Medium.woff') format('woff'),
+      url('../fonts/lemonmilk-medium/LEMONMILK-Medium.svg') format('truetype'),
+      url('../fonts/lemonmilk-medium/LEMONMILK-Medium.svg#LEMONMILK-Medium') format('svg');
   font-style: normal;
 }
 
@@ -190,6 +198,14 @@ strong {
   border-radius: 100%;
  }
 
+ .selected-img {
+  filter: grayscale(1);
+ }
+
+ .selected-img:hover {
+  filter: grayscale(0);
+ }
+
  /* SITE STRUCTURE */
 
  .site-header, .site-footer {
@@ -232,21 +248,15 @@ strong {
    padding: 0 0 3em 0;
  }
 
- .line-break {
+ hr {
   margin-bottom: 3.5em;
   border-bottom: .1em solid rgb(0 0 0 / .5);
  }
 
  /* PERSONAL SECTION */
 
-.personal {
-  background: rgb(0 0 0 / .1);
-  padding: 3em;
-  margin: 0 auto;
-}
-
  .custom-headline {
-  font-family: LEMON MILK, Avenir Next, Helvetica, sans-serif;
+  font-family: 'LEMON MILK MED', 'Avenir Next', Helvetica, sans-serif;
   font-size: 2em;
   padding-bottom: 1em;
   line-height: 1;
@@ -263,7 +273,7 @@ strong {
 
  /* LAYOUT: THUMB IMAGE GRID */
 
- .thumbgrid {
+ .thumbgrid, .thumbgrid2, .thumbgrid3 {
    padding: 0;
    display: flex;
    flex-wrap: wrap;
@@ -276,8 +286,24 @@ strong {
   padding-bottom: 0.4%;
  }
 
+.thumbgrid2 li {
+  list-style: none;
+  width: 24.5%;
+  padding-bottom: 0.4%;
+ }
+
+ .thumbgrid3 li {
+  list-style: none;
+  width: 24.5%;
+  padding-bottom: 0.4%;
+ }
+
  @media (min-width: 768px) {
   .thumbgrid li {
+    width: 49.5%;
+  }
+
+  .thumbgrid3 li {
     width: 24.5%;
   }
  }
@@ -289,6 +315,17 @@ strong {
  }
 
  .thumbgrid a:hover img {
+  filter: contrast(1.20);
+  border: 1px solid rgb(113 192 177);
+ }
+
+ .thumbgrid3 a img {
+  filter: brightness(1.05);
+  transition: all ease-in-out 0.2s;
+  border: 1px solid rgb(255 255 255 / 0);
+ }
+
+ .thumbgrid3 a:hover img {
   filter: contrast(1.20);
   border: 1px solid rgb(113 192 177);
  }
